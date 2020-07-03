@@ -1,0 +1,5 @@
+<Project>
+  <Target Name="UpdateCiSettings" AfterTargets="MinVer" Condition="'$(CI)' == 'true' AND '$(IsPackable)' == 'true'">
+    <Message Importance="High" Text="##vso[build.updatebuildnumber]$(PackageVersion)" />
+  </Target>
+</Project>

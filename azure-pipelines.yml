@@ -1,0 +1,15 @@
+trigger:
+  batch: true
+  branches:
+    include:
+    - master
+
+pr:
+- master
+
+stages:
+- stage: build
+  displayName: Build
+
+- stage: deploy
+  displayName: Deploy
